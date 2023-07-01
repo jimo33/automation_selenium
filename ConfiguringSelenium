@@ -4,5 +4,52 @@ These are steps to install Intelli J, Python, and Selenium on your system
 Installing Intelli 
 Go to 
 
+In the terminal window
 
+
+Certainly! To set up the development environment for mobile automation testing using Selenium with Python in IntelliJ IDEA, you'll need to follow these steps:
+
+1. Install Python: Download and install Python from the official Python website (https://www.python.org/downloads/) according to your operating system. Make sure to select the option to add Python to the system PATH during installation.
+
+2. Install IntelliJ IDEA: Download and install the community edition of IntelliJ IDEA from the JetBrains website (https://www.jetbrains.com/idea/download/). Follow the installation instructions for your operating system.
+
+3. Create a New Project: Launch IntelliJ IDEA and click on "Create New Project" or select "New" -> "Project" from the main menu. Choose "Pure Python" as the project type and provide a name and location for your project. Click "Create."
+
+4. Configure Python Interpreter: Once the project is created, you need to configure the Python interpreter. Go to "File" -> "Settings" -> "Project" -> "Python Interpreter." Click on the gear icon and select "Add." Choose the Python interpreter you installed in step 1 and click "OK."
+
+5. Install Required Packages: Open the Terminal window in IntelliJ IDEA and execute the following command to install the required packages:
+
+```bash
+pip install selenium
+```
+
+6. Create a Python File: Right-click on your project in the Project Explorer and select "New" -> "Python File." Provide a name for the file and click "OK."
+
+7. Write Test Code: In the newly created Python file, you can write your mobile automation test code using Selenium. Here's a simple example that launches the Chrome browser and opens a URL:
+
+```python
+from selenium import webdriver
+
+# Set the path to the chromedriver executable
+driver_path = "/path/to/chromedriver"
+
+# Create a new instance of the Chrome driver
+driver = webdriver.Chrome(executable_path=driver_path)
+
+# Open a URL
+driver.get("https://www.example.com")
+
+# Perform actions or assertions on the webpage
+
+# Quit the browser
+driver.quit()
+```
+
+Make sure to replace `"/path/to/chromedriver"` with the actual path to the chromedriver executable on your system. You can download the chromedriver from the official Chromium website (https://sites.google.com/a/chromium.org/chromedriver/).
+
+8. Run the Test: Right-click within the Python file and select "Run" to execute the test.
+
+That's it! You have set up the development environment using IntelliJ IDEA with Python and created a basic Selenium test script. You can expand upon this example and explore the Selenium documentation for more advanced usage and features.
+
+Note: If you prefer using a different web browser, you can download the corresponding driver (e.g., geckodriver for Firefox) and adjust the code accordingly.
 
